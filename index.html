@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+	<link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+</head>
+<body>
+	<div class="calculadora">
+		<p id="visor"></p><br>
+		<button class="tipo1 color1" onclick="limpar()">AC</button>
+		<button class="tipo1 color1" onclick="mn()">+/-</button>
+		<button class="tipo1 color1" onclick="porc()">%</button>
+		<button class="tipo1 color2" onclick="adNumero('/')">÷</button><br>
+		<button class="tipo1" onclick="adNumero('7')">7</button>
+		<button class="tipo1" onclick="adNumero('8')">8</button>
+		<button class="tipo1" onclick="adNumero('9')">9</button>
+		<button class="tipo1 color2" onclick="adNumero('*')">x</button><br>
+		<button class="tipo1" onclick="adNumero('4')">4</button>
+		<button class="tipo1" onclick="adNumero('5')">5</button>
+		<button class="tipo1" onclick="adNumero('6')">6</button>
+		<button class="tipo1 color2" onclick="adNumero('-')">-</button><br>
+		<button class="tipo1" onclick="adNumero('1')">1</button>
+		<button class="tipo1" onclick="adNumero('2')">2</button>
+		<button class="tipo1" onclick="adNumero('3')">3</button>
+		<button class="tipo1 color2" onclick="adNumero('+')">+</button><br>
+		<button class="tipo2" onclick="adNumero('0')">0</button>
+		<button class="tipo1" onclick="adNumero('.')">.</button>
+		<button class="tipo1 color2" onclick="calcular()">=</button>
+	</div>
+
+	<p id="marca">Feito por Kayky R. Lima</p>
+</body>
+</html>
+<script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	function adNumero(num){
+		var numero = document.getElementById('visor').innerHTML;
+		document.getElementById('visor').innerHTML = numero + num;
+	}
+
+	function limpar(){
+		document.getElementById('visor').innerHTML = "";
+	}
+
+	function calcular(){
+		var resultado = document.getElementById('visor').innerHTML;
+		if(resultado){
+			document.getElementById('visor').innerHTML = eval(resultado)
+		}
+	}
+
+	function mn(){
+		var mn = document.getElementById('visor').innerHTML
+		document.getElementById('visor').innerHTML = -mn
+	}
+
+	function porc(){
+		var porc = document.getElementById('visor').innerHTML
+		document.getElementById('visor').innerHTML = porc/100
+	}
+
+	$("body").keydown(function(e) {
+      if(e.keyCode == 48) { // 0
+        adNumero('0')
+      }
+      else if(e.keyCode == 49) { // 1
+        adNumero('1')
+      }
+      else if(e.keyCode == 50) { // 2
+        adNumero('2')
+      }
+      else if(e.keyCode == 51) { // 3
+        adNumero('3')
+      }
+      else if(e.keyCode == 52) { // 4
+        adNumero('4')
+      }
+      else if(e.keyCode == 53) { // 5
+        adNumero('5')
+      }
+      else if(e.keyCode == 54) { // 6
+        adNumero('6')
+      }
+      else if(e.keyCode == 55) { // 7
+        adNumero('7')
+      }
+      else if(e.keyCode == 56) { // 8
+        adNumero('8')
+      }
+      else if(e.keyCode == 57) { // 9
+        adNumero('9')
+      }
+    })
+</script>

@@ -1,0 +1,77 @@
+body {
+    background-color: #867c7c;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.calculadora {
+    height: 430px;
+    width: 300px;
+    border: 2px solid transparent;
+    text-align: center;
+    background-color: rgb(55, 55, 55);
+    border-radius: 10px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+}
+
+button {
+    margin: 5px;
+    margin-top: 0;
+    background-color: #5c5a5a;
+    color: #ffff;
+    border: none;
+    font-size: 16px;
+    font-weight: bold; 
+}
+
+.tipo1, .tipo2 {
+    height: 50px;
+}
+.tipo1 {
+    width: 50px;
+    border-radius: 50%;
+}
+.tipo2 {
+    width: 115px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.color1 {
+    background-color: lightgrey;
+    color: black;
+}
+.color2 {
+    background-color: orange;
+}
+
+#visor {
+    height: 50px;
+    width: 230px;
+    font-size: 20px;
+    font-weight: bold; 
+    text-align: right;
+    margin-left: auto;
+    margin-right: 9%;
+    margin-top: 10%;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 5px;
+}
+
+#marca {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    font-size: 15px;
+    font-weight: bold; 
+    color: white;
+}
