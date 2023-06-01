@@ -31,15 +31,15 @@
 		<button class="tipo1" onclick="adNumero('.')">.</button>
 		<button class="tipo1 color2" onclick="calcular()">=</button>
 	</div>
-
-	<p id="marca">Feito por Kayky R. Lima</p>
 </body>
 </html>
 <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
 	function adNumero(num){
-		var numero = document.getElementById('visor').innerHTML;
-		document.getElementById('visor').innerHTML = numero + num;
+    		var numero = document.getElementById('visor').innerHTML;
+    		if (numero.length < 21) {
+        		document.getElementById('visor').innerHTML = numero + num;
+    		}
 	}
 
 	function limpar(){
